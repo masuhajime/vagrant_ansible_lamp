@@ -1,0 +1,14 @@
+---
+- hosts: all
+  vars_files:
+    - vars/php.yml
+    - vars/mysql.yml
+  roles:
+    - geerlingguy.repo-epel
+    - misc
+    - yum
+    - geerlingguy.mysql
+    - geerlingguy.apache
+    - geerlingguy.php
+    - geerlingguy.redis
+#   -opencv

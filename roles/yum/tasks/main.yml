@@ -1,0 +1,24 @@
+- name: add repository 'epel-release'
+  yum: name=epel-release state=latest
+
+- name: add repository 'remi-repo'
+  yum: name=http://rpms.famillecollet.com/enterprise/remi-release-6.rpm state=present
+
+- name: "yum install ntp"
+  yum: name=ntp state=latest
+  notify:
+  - ntpd restart
+- name: "yum install vim"
+  yum: name=vim state=latest
+
+- name: "yum install tree"
+  yum: name=tree state=latest
+
+- name: "yum install gcc"
+  yum: name=gcc state=latest
+
+- name: "yum install wget"
+  yum: name=wget state=latest
+
+- name: "yum install cmake"
+  yum: name=cmake state=latest
