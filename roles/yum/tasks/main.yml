@@ -8,6 +8,7 @@
   yum: name=ntp state=latest
   notify:
   - ntpd restart
+
 - name: "yum install vim"
   yum: name=vim state=latest
 

@@ -3,11 +3,14 @@
   vars_files:
     - vars/php.yml
     - vars/mysql.yml
+    - vars/user_password.yml
   roles:
+    - user
     - geerlingguy.repo-epel
     - misc
     - yum
     - geerlingguy.mysql
+    - httpd_fix
     - geerlingguy.apache
     - geerlingguy.php
     - geerlingguy.redis

@@ -1,0 +1,8 @@
+- user: name=masuhajime password={{user_password}} shell=/bin/bash state=present append=yes
+
+- name: create directory masuhajime/.ssh
+  file: path=/home/masuhajime/.ssh state=directory owner=masuhajime mode=0700
+
+- copy: src=authorized_keys dest=/home/masuhajime/.ssh/authorized_keys owner=masuhajime mode=0600
+
+- lineinfile: dest=/etc/sudoers line="masuhajime	ALL=(ALL) 	ALL"
