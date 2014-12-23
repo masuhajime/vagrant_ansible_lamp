@@ -40,4 +40,5 @@ php_packages:
   - php-pdo
   - php-pecl-apc
   - php-xml
+  - php-mcrypt
   - ImageMagick

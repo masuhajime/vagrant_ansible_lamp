@@ -5,4 +5,8 @@
 
 - copy: src=authorized_keys dest=/home/masuhajime/.ssh/authorized_keys owner=masuhajime mode=0600
 
-- lineinfile: dest=/etc/sudoers line="masuhajime	ALL=(ALL) 	ALL"
+- copy: src=id_rsa dest=/home/masuhajime/.ssh/id_rsa owner=masuhajime mode=0600
+
+- copy: src=config dest=/home/masuhajime/.ssh/config owner=masuhajime mode=0600
+
+- lineinfile: dest=/etc/sudoers line='masuhajime ALL=(ALL) ALL'

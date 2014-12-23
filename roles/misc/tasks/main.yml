@@ -2,3 +2,4 @@
 - name: install ag
   command: sudo rpm -ivh http://swiftsignal.com/packages/centos/6/x86_64/the-silver-searcher-0.13.1-1.el6.x86_64.rpm
   sudo: yes
+  ignore_errors: yes
