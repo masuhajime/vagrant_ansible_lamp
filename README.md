@@ -2,12 +2,13 @@ centos65 lamp
 ====
 
 ```
-$ ansible-galaxy install
-    - geerlingguy.repo-epel
-    - geerlingguy.mysql
-    - geerlingguy.apache
-    - geerlingguy.php
-    - geerlingguy.redis
+$ ansible-galaxy install \
+    geerlingguy.repo-epel \
+    geerlingguy.mysql \
+    geerlingguy.apache \
+    geerlingguy.php \
+    geerlingguy.redis
+ # --force
 ```
 
 ```
